@@ -1,0 +1,293 @@
+/* Page containers */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Ensure that HTML5 semantic elements render properly in older browsers */
+main,
+section,
+header,
+nav,
+footer,
+article {
+	display: block;
+}
+
+/* Element for clearing floating elements */
+.clearfix {
+	clear: both;
+}
+
+/* Horizontal rules */
+hr {
+	width: 100%;
+	height: 2px;
+	margin: 10px 0;
+	border-width: 0;
+	background-color: #e3e3e3;
+}
+
+/* Links */
+a {
+	color: #14a;
+}
+a:hover {
+	color: #36c;
+}
+
+/* Horizontal site header at top of page */
+#site-header {
+	display: table;
+	padding: 10px 12px;
+	width: 100%;
+	/* Set header color to a dark blue (to match school colors) */
+	background-color: #14a;
+	box-sizing: border-box;
+}
+/* Name of site in header */
+#site-header h1 {
+	display: table-cell;
+	font-weight: 400;
+	vertical-align: middle;
+}
+#site-header h1 a {
+	font-size: inherit;
+	color: #fff;
+	text-decoration: none;
+}
+#site-header a {
+	font-size: 20px;
+}
+
+/* Site navigation in header */
+#site-navigation {
+	display: table-cell;
+	/* Prevent source code whitespace from disrupting layout */
+	font-size: 0;
+	vertical-align: middle;
+}
+#site-navigation ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+#site-navigation li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	/* Disable bullets on nav items */
+	list-style-type: none;
+}
+#site-navigation a {
+	padding: 10px 15px;
+	font-size: 16px;
+	color: #fff;
+	/* Disable underline on nav items */
+	text-decoration: none;
+}
+
+/* Site search form in header */
+#site-search-form {
+	display: table-cell;
+	/* Allow search submit icon to be absolutely positioned within form */
+	position: relative;
+	/* Force search form to right edge of site header */
+	width: 1%;
+	vertical-align: middle;
+}
+
+/* Site search input */
+/* Some of these styles should later be moved to apply to all text inputs */
+#site-search-field {
+	width: 220px;
+	border: solid 1px rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.25);
+	color: #fff;
+}
+/* Style the text input placeholder color; do not combine these CSS rules */
+#site-search-field::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+#site-search-field::-moz-placeholder {
+	opacity: 1;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* Search form submit button (a magnifying glass icon) */
+#site-search-submit {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	z-index: 10;
+	border-width: 0;
+	background-image: url('../svg/search.svg');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-color: transparent;
+	font-size: 0;
+}
+
+/* Notifications */
+.notification {
+	display: inline-block;
+	margin-top: 20px;
+	border: solid 1px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 10px 20px;
+	background-color: #58e;
+	color: #fff;
+}
+
+/* Generic form elements */
+
+/* Text inputs and multi-line text boxes */
+input[type='text'],
+input[type='password'],
+textarea {
+	padding: 6px 8px;
+	padding-right: 36px;
+	box-sizing: border-box;
+	border: solid 1px #aaa;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	resize: vertical;
+}
+input[type='text']:focus,
+input[type='password']:focus,
+textarea:focus {
+	outline-width: 0;
+	border-color: #36c;
+	box-shadow: 0 0 0px 2px #69f;
+}
+
+/* Generic button */
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+button {
+	margin: 6px 0;
+	border: solid 1px rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.25);
+	padding: 10px 12px;
+	background-color: #14a;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #fff;
+}
+input[type='button']:focus,
+input[type='submit']:focus,
+input[type='reset']:focus,
+button:focus {
+	outline-width: 0;
+	background-color: #36c;
+}
+input[type='file'] {
+	margin: 6px 0;
+}
+/* Generic styling for any kind of warning element */
+.warning {
+	background-color: #c33;
+}
+
+/* Page containers */
+main {
+	margin: 0 auto;
+	text-align: center;
+	max-width: 800px;
+}
+form {
+	display: inline-block;
+	width: 300px;
+	text-align: left;
+}
+form textarea,
+form input[type="text"],
+form input[type="password"],
+form input[type="file"] {
+	width: 100%;
+}
+
+/* Textbook ad entries */
+
+.book-ad {
+	display: table;
+	width: 100%;
+	position: relative;
+	border-radius: 3px;
+	border: solid 1px #e3e3e3;
+	background-color: #f9f9f9;
+	padding: 15px;
+	box-sizing: border-box;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+/* Set all book images (no matter where they are) to have a fixed height */
+.book-image {
+	height: 120px;
+}
+/* Style book images within ad entries to have some space around them and be
+/* positioned to the side */
+.book-ad .book-image-container {
+	display: table-cell;
+	width: 1%;
+	padding: 5px;
+	padding-right: 15px;
+	vertical-align: top;
+}
+
+/* Book information container to the right of image */
+.ad-info {
+	display: table-cell;
+	position: relative;
+	vertical-align: top;
+	line-height: 1.5;
+}
+
+.book-title {
+	margin: 0;
+	line-height: normal;
+}
+.book-ad .book-price {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 24px;
+}
+
+.book-description {
+	width: 100%;
+}
+
+/* The badge in the corner of a book ad entry indicating that it's closed */
+.closed-badge {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: solid 1px rgba(0, 0, 0, 0.25);
+	border-radius: 3px;
+	padding: 2px 4px;
+	background-color: #c33;
+	font-size: 12px;
+	color: #fff;
+}
+
+/* The label for a particular book attribute such as author or ISBN */
+.book-attr-label {
+	font-weight: bold;
+}
+
+/* Homepage */
+
+#home-intro {
+	max-width: 500px;
+	margin: 0 auto;
+	font-size: 18px;
+}

@@ -1,0 +1,13 @@
+mysql> Select book_title, book_author, book_isbn, listed_price, ad_description
+    -> FROM ad
+    -> WHERE ad.user_id = (select DISTINCT user_id
+    -> From user
+    -> WHERE user.email_address  = "EC@cougars.csusm.edu");
++-----------------------+----------------+------------+--------------+------------------------------------------------------------+
+| book_title            | book_author    | book_isbn  | listed_price | ad_description                                             |
++-----------------------+----------------+------------+--------------+------------------------------------------------------------+
+| El Tabaco Macaco      | Farrar Straus  | 1627790365 |        20.50 | I see the the book has a few scratches around the corners. |
+| Algorithms to Live By | Michael Johnes | 553418815  |        20.50 | New in the wrapper                                         |
+| The Undoing Project   | Tom Garland    | 393254593  |        10.40 | awesome                                                    |
++-----------------------+----------------+------------+--------------+------------------------------------------------------------+
+3 rows in set (0.00 sec)

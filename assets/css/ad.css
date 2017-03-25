@@ -1,0 +1,49 @@
+.book-ad {
+	margin-top: 20px;
+	padding: 0;
+	border-width: 0;
+	background: none;
+}
+
+.closed-badge {
+	/* Do not absolutely position closed badge on individual ad page since it
+	/* will be displayed beneath book title */
+	position: static;
+	font-size: 14px;
+}
+
+.book-title {
+	font-size: 32px;
+}
+.ad-info {
+	font-size: 18px;
+}
+
+/* Put some space between book title and author */
+.book-authors {
+	margin-top: 20px;
+}
+
+/* Ensure that uploaded book images do not extend beyond a certain height */
+.book-image {
+	height: 200px;
+}
+
+/* Information for contacting the poster of the ad */
+.contact-info {
+	display: table-row;
+	text-align: left;
+}
+
+/* Link to edit ad (if user has permission) */
+.edit-ad-link {
+	float: right;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+	border: solid 2px #149;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+}

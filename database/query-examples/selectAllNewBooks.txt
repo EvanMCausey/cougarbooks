@@ -1,0 +1,12 @@
+mysql> SELECT book_title, book_author, book_isbn, listed_price, ad_description
+    -> FROM ad
+    -> WHERE ad_description LIKE '%new%';
++-----------------------------+----------------+-------------+--------------+--------------------+
+| book_title                  | book_author    | book_isbn   | listed_price | ad_description     |
++-----------------------------+----------------+-------------+--------------+--------------------+
+| Algorithms to Live By       | Michael Johnes | 553418815   |        20.50 | New in the wrapper |
+| The Undoing Project         | Timothy        | 393254593   |         2.00 | Not new            |
+| Destruction by the computer | Tom Smith      | 93857203784 |         2.40 | new                |
+| Computer science in space   | DJ dance       | 1029387421  |        28.23 | new book           |
++-----------------------------+----------------+-------------+--------------+--------------------+
+4 rows in set (0.00 sec)

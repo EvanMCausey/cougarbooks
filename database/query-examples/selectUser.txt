@@ -1,0 +1,11 @@
+mysql> SELECT user_id, first_name, last_name, email_address, telephone_no 
+FROM user
+WHERE email_address = 'admin@cougars.csusm.edu' AND user_password = 'password';
++---------+------------+-----------+-------------------------+--------------+
+| user_id | first_name | last_name | email_address           | telephone_no |
++---------+------------+-----------+-------------------------+--------------+
+|       1 | admin      | admin     | admin@cougars.csusm.edu | 1111111111   |
++---------+------------+-----------+-------------------------+--------------+
+1 row in set (0.00 sec)
+
+

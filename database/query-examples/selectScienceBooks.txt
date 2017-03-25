@@ -1,0 +1,10 @@
+mysql> SELECT book_title, book_author, book_isbn, listed_price, ad_description
+    -> FROM ad
+    -> WHERE book_title LIKE '%science%';
++---------------------------+-------------+------------+--------------+----------------+
+| book_title                | book_author | book_isbn  | listed_price | ad_description |
++---------------------------+-------------+------------+--------------+----------------+
+| Computer science in space | DJ dance    | 982736492  |        11.20 | old book       |
+| Computer science in space | DJ dance    | 1029387421 |        28.23 | new book       |
++---------------------------+-------------+------------+--------------+----------------+
+2 rows in set (0.00 sec)
